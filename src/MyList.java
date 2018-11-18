@@ -50,7 +50,7 @@ public class MyList {
         listSize--;
     }
 
-    public Object get(int index) {
+    public Object getAtIndex(int index) {
         if (index < 0 || index >= listSize) {
             throw new IndexOutOfBoundsException("index out of bounds");
         }

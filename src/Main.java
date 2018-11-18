@@ -10,11 +10,11 @@ public class Main {
         mylist.add("element 4");
 
         int indexOfRetrievedElement = 0;
-        System.out.println("This is what you selected: [" + mylist.get(indexOfRetrievedElement) + "]");
+        System.out.println("This is what you selected: [" + mylist.getAtIndex(indexOfRetrievedElement) + "]");
         System.out.println("This is the entire list: " + mylist.getEntireList());
 
         int indexOfDeletedElement = 1;
-        System.out.println("\nDeleted: [" + mylist.get(indexOfDeletedElement) + "]");
+        System.out.println("\nDeleted: [" + mylist.getAtIndex(indexOfDeletedElement) + "]");
         mylist.deleteAtIndex(indexOfDeletedElement);
         System.out.println("This is the entire list: " + mylist.getEntireList());
 
