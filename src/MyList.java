@@ -1,4 +1,4 @@
-public class MyList {
+public class MyList<T> {
 
     private Object[] list;
     private int capacity;
@@ -17,7 +17,7 @@ public class MyList {
     }
 
     //Methods
-    public void add(Object element) {
+    public void add(T element) {
         if (listSize == capacity) {
             throw new IllegalArgumentException("list capacity exceeded");
         }
@@ -25,7 +25,7 @@ public class MyList {
         listSize++;
     }
 
-    public void addAt(int index, Object element) {
+    public void addAt(int index, T element) {
         if (listSize == capacity) {
             throw new IllegalArgumentException("list capacity exceeded");
         }
@@ -50,14 +50,14 @@ public class MyList {
         listSize--;
     }
 
-    public Object getAtIndex(int index) {
+    public T getAtIndex(int index) {
         if (index < 0 || index >= listSize) {
             throw new IndexOutOfBoundsException("index out of bounds");
         }
-        return list[index];
+        return (T)list[index];
     }
 
-    public Object getEntireList() {
+    public T getEntireList() {
         StringBuilder builder = new StringBuilder();
         builder.append("[");
         for (int i = 0; i < listSize; i++) {
@@ -69,6 +69,6 @@ public class MyList {
             }
         }
         builder.append("]");
-        return builder.toString();
+        return (T) builder.toString();
     }
 }
